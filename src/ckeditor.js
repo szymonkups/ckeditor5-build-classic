@@ -9,6 +9,8 @@ import MarkdownPlugin from './markdown';
 import AutoformatPlugin from '@ckeditor/ckeditor5-autoformat/src/autoformat';
 import BoldPlugin from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import ItalicPlugin from '@ckeditor/ckeditor5-basic-styles/src/italic';
+import CodePlugin from '@ckeditor/ckeditor5-basic-styles/src/code';
+import BlockquotePlugin from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import HeadingPlugin from '@ckeditor/ckeditor5-heading/src/heading';
 import ImagetoolbarPlugin from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import LinkPlugin from '@ckeditor/ckeditor5-link/src/link';
@@ -24,6 +26,8 @@ ClassicEditor.build = {
 		AutoformatPlugin,
 		BoldPlugin,
 		ItalicPlugin,
+		CodePlugin,
+		BlockquotePlugin,
 		HeadingPlugin,
 		ImagetoolbarPlugin,
 		LinkPlugin,
@@ -34,8 +38,12 @@ ClassicEditor.build = {
 		toolbar: {
 			items: [
 				'headings',
+				'bulletedList',
+				'numberedList',
+				'blockQuote',
 				'bold',
 				'italic',
+				'code',
 				'link',
 				'undo',
 				'redo'
